@@ -18,7 +18,7 @@ const Navbar = () => {
         />
       </Link>
     </div>
-  
+  <div><Link href="/entrep" className="nav-link  p-3 sm:pr-5" ><p style={{ color: 'white', fontWeight: 'bold' }}>Entrep</p></Link> </div>
     <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
       <Link href="/Register" className="nav-link flex space-x-5 p-3 sm:pr-5" aria-current="page">
         <p style={{ color: 'white', fontWeight: 'bold' }}>Register</p>
