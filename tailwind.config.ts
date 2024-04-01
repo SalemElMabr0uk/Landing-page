@@ -35,7 +35,11 @@ module.exports = {
         },
         pink:{
           10: '#fe8ece',
-        },
+        } ,
+      qqgf:{
+          10: 'linear-gradient(180deg, #ff8ed0, #fb8971) 1;',
+        } 
+        
       },
       
       backgroundImage: {
