@@ -165,6 +165,7 @@ const DetailPage: React.FC<any> = ({ id }) => {
               <div className='h-[30%]'> <img src={''} className=" flex w-full h-full object-cover rounded" /></div>
               <h2 className="flax text-2xl text-white font-semibold text-center mt-2 p-2 h-[15%]">Name</h2>
               <p className='flex text-[#CBD5E1] text-sm h-[20%] justify-center'>Post</p>
+              <p> we should do a data of mentors also !! </p>
               <ul className="regular-14 flex gap-4 text-gray-30">
              
                 <li className=' '>
