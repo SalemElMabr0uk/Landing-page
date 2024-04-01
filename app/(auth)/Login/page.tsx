@@ -95,7 +95,7 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="flex-1 items-start hidden md:block">
+        <div className="flex-1 items-start  md:block">
           <div className="h-full w-full relative z-20 flex-col gap-8 rounded-3xl px-2 py-8">
             <Image src={IndianStudent} alt="Indian Student" width={600} height={800} />
           </div>

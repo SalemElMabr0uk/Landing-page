@@ -7,7 +7,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <div className="text-white">
-      <DetailPage id={parseInt(params.id, 10)} /> 
+      <DetailPage id={params.id} /> 
     </div>
   );''
 }
