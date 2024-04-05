@@ -19,12 +19,11 @@ const Btn = ({ children, onClick, variant = 'primary' }: BtnProps) => {
       {children}
      
       
-        <textarea 
+        <div
         
         className='text-[#171717]'
  
-          rows={3}
-          cols={20} 
+           
            
           style={{ 
             marginLeft: '60px',
@@ -42,8 +41,8 @@ const Btn = ({ children, onClick, variant = 'primary' }: BtnProps) => {
           border:' 1px solid #FB8971', 
           borderWidth: '2px', 
           borderStyle: 'solid'
-        }}
-        />
+        }}>
+       </div>
       
     </button>
   );
