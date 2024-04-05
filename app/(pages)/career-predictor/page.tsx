@@ -3,7 +3,8 @@
 import React, { useState } from 'react'; 
 import SelectMenu from './select';
 import Btn from './button';
- 
+
+
 
 interface Option {
   label: string;
@@ -16,85 +17,34 @@ interface SelectProps {
 }
 
 const CareerPredictor: React.FC<any> = () => {
-
-  const gradientColor = {
-    color: 'linear-gradient(180deg, #ff8ed0, #fb8971) 1]',
-     
-  };
-  const careers = [
-   
-    { value: "devops", label: "DevOps" },
-    { value: "fullstack java", label: "fullstack java" }, 
-    { value: "AI", label: "AI" },
-    { value: "ML", label: "ML" },
-  ];
-  const  number_of_years=[ 
-    { value: "0", label: "0" },
-  { value: "5", label: "5" },
-  { value: "10", label:"10"},
-  { value: "15", label:"15"}];
-
-  const country = [
-    {  label: "Tunisie",value: "Tunisie", },
-    { value: "Palestine", label: "Palestine" },
-    { value: "India", label: "Palestine" },
-    { value: "Algerie", label: "Algerie" },  
-
-  ];
-
   const [selectedOption, setSelectedOption] = useState<string>('');
 
-  const handleSelectChange = (value: string) => {
+  const onChange = (value: string) => {
     setSelectedOption(value);
   };
- 
-
- 
-
   return (
     <>
       <div className="flex flex-col items-start px-20 py-11 text-base bg-white max-md:px-5">
         <div className="font-lato font-semibold self-center text-[54px] top-[99px]  left-[328px] text-6xl  bg-clip-text leading-[59.4px] gray-850 max-md:max-w-full max-md:text-4xl  ">
           <span className="text-[#162E4F]">Career Scope</span>
-          <span className="text-qqgf-10 font-lato   bg-clip-text" style={gradientColor}> Predictor</span>
+          <span className="text- text-gradient  font-lato   bg-clip-text" >&nbsp;Predictor</span>
         </div>
         <div className="self-center mt-2 text-[28px]  font-light tracking-tight leading-7 text-[#525252] max-md:max-w-full font-sans">
           Choosing a career? Know about its scope in later years
         </div>
-        <div  className="mt-[92px]">
-              <div className="ml-[108px]  text-xl leading-7 text-[#171717] max-md:ml-2.5 font-sans">
-                 Choose a field
-              </div>
-              
-              <div  className="placeholder: Select a career option"> 
-                  <SelectMenu options={careers} onChange={handleSelectChange} /> 
-              </div>
 
-        </div>
-        <div className="mt-4 ml-[108px] text-xl leading-7 text-[#171717] max-md:ml-2.5 font-sans">
-          Choose number of years
-        </div>
-    
-        <div>
-        <SelectMenu
-            onChange={handleSelectChange}
-            options={number_of_years}  
-            />
+        <div className="flex flex-row mt-20 ">
            
-</div>
-
-        <div  className="mt-4 ml-[108px] text-xl leading-7 text-[#171717] max-md:ml-2.5 font-sans" >
-          Choose country
-         
         </div>
-        <SelectMenu options={country} onChange={handleSelectChange} />
-        <div >
-       <Btn children="Know the scope >" onClick={function (): void {
-            throw new Error('Function not implemented.');
-          } } />  
-        </div>
-       
-        
+        <div>
+          <Btn  onClick={() => {
+           return <h1>setSelectedValue(e.target.value)</h1>; 
+             
+          }} />
+          </div>
+      
+      
+     
         <div className="flex flex-col ml-[108px] px-7 py-7 mt-12 w-full   bg-neutral-100 max-w-[1080px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
           <div className="font-lato tracking-wide leading-[100%] text-[#171717] max-md:max-w-full text-[Text/text-body]">
             How it works
@@ -111,7 +61,6 @@ const CareerPredictor: React.FC<any> = () => {
     </>
   );
 };
-
 
 export default CareerPredictor;
  

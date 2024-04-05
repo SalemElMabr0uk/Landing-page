@@ -1,40 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface Option {
-    label: string;
-    value: string;
-  }
-  
-  interface SelectProps {
-    options: Option[];
-    onChange: (value: string) => void;
-  }
+  label: string;
+  value: string;
+}
 
-const options = [
-  { value: 'Select a career option', label: 'Select a career option',id:1},
-    {value: 'option1', label: 'Option 1' ,id:2},
-  { value: 'option2', label: 'Option 2',id:3 },
-  { value: 'option3', label: 'Option 3',id:4 },
-];
+interface SelectProps {
+  label: string;
+  options: Option[];
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  placeholder: string;
+  requiredMessage?: string;
+}
 
-const SelectMenu: React.FC<SelectProps> = ({ options, onChange }) => {
-    const [selectedValue, setSelectedValue] = useState(options.length > 0 ? options[0].value : '');
+const SelectMenu: React.FC<SelectProps> = ({ label, options, value, onChange, error, requiredMessage, placeholder }) => {
+  const hasValue = value !== '';
+  const showRequiredMessage = !hasValue && !error;
 
-  return (<div className="   ml-[108px]">
-    <label  className="mt-4   text-xl leading-7 text-[#171717] max-md:ml-2.5 font-sans"></label>
-    <select value={selectedValue} onChange={(e) => setSelectedValue(e.target.value)}
-   
-    className=" rounded-lg border-b text-[16px]  justify-center 
-                      border-pink-300  bg-[rgba(19,_19,_19,_0.05)] bg-opacity-25  h-[34px] w-[333px]
-                        text-[#A3A3A3]   left-[363px]  pl-[16px]  " >
-      {options.map((option) => (
-        <option key={option.value} value={option.value} className=' text-[16px] inline-block'>
-          {option.value}
-        </option>
-       
-      ))}
-    </select>
+  // Set placeholder value if no value is provided
+  const currentValue = hasValue ? value : '';
+
+  return (
+    <div className="mt-2 ml-[108px]">
+      <label className="mt-2 text-xl leading-7 text-[#171710] max-md:ml-2.5 font-sans">{label}</label>
+      <br />
+      <select
+        aria-placeholder={placeholder}
+        value={currentValue} // Use currentValue instead of value
+        onChange={(e) => onChange(e.target.value)}
+        className={`rounded-lg border-b text-[18px] justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 h-[34px] w-[333px] text-[#525252] pl-2 font-sans ${error ? 'border-red-500' : ''}`}
+      >
+        <option value="" disabled>{placeholder}</option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>{option.label}</option>
+        ))}
+      </select>
+      {error && <div className="text-red-500 mt-1">{requiredMessage}</div>}
+      {showRequiredMessage && <div className="text-red-500 mt-1 text-[16px]">{requiredMessage}</div>}
     </div>
   );
 };
+
 export default SelectMenu;

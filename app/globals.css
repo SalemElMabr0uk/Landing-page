@@ -174,3 +174,102 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+
+.text-gradient {
+  /* Set the gradient as the background */
+  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);
+  /* Display as inline-block to fit the text */
+  display: inline-block;
+  /* Set the background to be clipped by the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set the text color to transparent so the background gradient shows through */
+  color: transparent;
+}
+.pink-gradient {
+  /* Set the gradient as the background */
+  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);
+  /* Display as inline-block to fit the text */
+  display: inline-block;
+  /* Set the background to be clipped by the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set the text color to transparent so the background gradient shows through */
+  color: transparent;
+}
+.submit {
+  height: 48px;  
+  border-radius: 8px;  
+  color: white;  
+  font-weight: bold; 
+ 
+  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);  
+  justify-content: center;  
+  margin-top: 22px;  
+  margin-right: 12px;  
+  align-items: center;  
+  padding-left: 12px; 
+  padding-right: 12px; 
+  margin-left: 108px;  
+  max-width: 100%; 
+  width: 336px;  
+  line-height: 100%;  
+}
+
+/* Media query for max-md */
+@media (max-width: 768px) {
+  .custom-button {
+    padding-left: 20px; /* max-md:px-5 */
+    margin-left: 10px; /* max-md:ml-2.5 */
+  }
+}
+
+
+.reset {
+  height: 48px;  
+  border-radius: 8px;  
+  color: rgb(251.16,137.52,111.35);  
+  font-weight: bold; 
+  background: white;  
+  border-color: text-gradient  ;
+  justify-content: center;  
+  margin-top: 22px;  
+  margin-right: 12px;  
+  align-items: center;  
+  padding-left: 12px; 
+  padding-right: 12px; 
+  margin-left: 108px;  
+  max-width: 100%; 
+  width: 336px;  
+  line-height: 100%;  
+}
+.result1{
+  border: solid 1px ;
+  border-color:#FB8971 ;
+  height: 308px;
+  width: 300px;
+  color: #525252;
+  border-radius: 8px;
+  margin-top:-300px;
+  margin-left:510px;
+  padding:32px;
+  gap: 10px;
+  font-family: 'Sans';
+  font-size: 16px;
+}
+
+.result2{
+  
+  border: solid 1px ;
+  border-color:#FB8971 ;
+  height: 308px;
+  width: 300px;
+  color: #525252;
+  border-radius: 8px;
+  margin-top:-309px;
+  margin-left:850px;
+  padding:32px;
+  gap: 10px;
+  font-family: 'Sans';
+}
