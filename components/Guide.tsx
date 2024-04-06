@@ -1,54 +1,51 @@
-import Image from 'next/image'
-import React from 'react'
+"use client"
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Card from './(cards)/Roadmapcards';
 
 const Guide = () => {
+  const [roadmaps, setRoadmaps] = useState([]);
+
+  useEffect(() => {
+    const fetchRoadmaps = async () => {
+      try {
+        const response = await axios.get('https://api.sqilco.com/api/roadmaps');
+        setRoadmaps(response.data.data);
+      } catch (error) {
+        console.error('Error fetching roadmaps:', error);
+      }
+    };
+
+    fetchRoadmaps();
+  }, []);
+
+  const renderStars = (rating: number) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(
+        <span key={i}>
+          <img src={i < rating ? "/star-16.png" : "/star-17.png"} alt="star" />
+        </span>
+      );
+    }
+    return stars;
+  };
+
   return (
-    <section className="flexCenter flex-col">
-      <div className="padding-container max-container w-full pb-24">
-        <p className="uppercase regular-18 -mt-1 mb-3 text-white">
-          We are here for you
-        </p>
-        <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
-          <h2 className="bold-40 text-white lg:bold-64 xl:max-w-[390px]">Guide You to <span className='text-orange-10'>Right</span> Path</h2>
-          <p className="regular-16 text-gray-30 xl:max-w-[520px]">In the garden of learning, student anxiety is a fleeting cloud, but beneath it, seeds of growth and resilience take root. Embrace the process, for it is in overcoming challenges that the most beautiful flowers of knowledge and personal development bloom</p>
-        </div>
-      </div>
+    <section className="flex-Center flex-col p-8 bg-white ">
+      <span className='text-3xl  font-bold text-center md:text-left'>
+        Work on </span><span className="text-orange-10 text-3xl  font-bold  text-center md:text-left">Real Projects</span><span className='text-3xl  font-bold text-center md:text-left'> - Nothing beats real experience
+      </span>
 
-      <div className="flexCenter max-container relative w-full">
-        <Image 
-          src="/dreaming_kid.png"
-          alt="boat"
-          width={1440}
-          height={580}
-          className="w-full object-cover object-center 2xl:rounded-5xl"
-        />
-
-        <div className="absolute flex bg-white py-8 pl-5 pr-7 gap-3 rounded-3xl border shadow-md md:left-[5%] lg:top-20">
-          <Image 
-            src="/meter.svg"
-            alt="meter"
-            width={16}
-            height={158}
-            className="h-full w-auto"
-          />
-          <div className="flexBetween flex-col">
-            <div className='flex w-full flex-col'>
-              <div className="flexBetween w-full">
-                <p className="regular-16 text-gray-20">Where</p>
-                <p className="bold-16 text-green-50">1 year</p>
-              </div>
-              <p className="bold-20 mt-2">We wanna go</p>
-            </div>
-
-            <div className='flex w-full flex-col'>
-              <p className="regular-16 text-gray-20">Where</p>
-              <h4 className="bold-20 mt-2 whitespace-nowrap">We are</h4>
-            </div>
-          </div>
+      <div className=" rounded-md">
+        <div className="flex  justify-start  overflow-x-auto hide-scrollbar  overflow-hidden">
+          {roadmaps.map((item, index) => (
+            <Card key={index} item={item} />
+          ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Guide
+export default Guide;
