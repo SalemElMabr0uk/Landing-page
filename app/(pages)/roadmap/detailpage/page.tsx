@@ -154,37 +154,7 @@ const DetailPage: React.FC<any> = ({ id }) => {
           </ul>
         </div>
 
-        {/** meet our mentors*/}
-        <h1 className=" p-8 mt-4 justify-start text-3xl text-white font-bold">
-          Meet The <span className="text-[#FF8ED0] text-3xl">Mentors</span >{' '}
-        </h1>
-        <div className="p-6 m-2 rounded-md">
-          <div className="flex flex-nowrap justify-start w-screen overflow-x-auto hide-scrollbar  hover:shadow-lg overflow-hidden ">
-
-            <div className=" w-[90%] sm:w-1/2 md:w-1/3 lg:w-1/4 flex-none h-[500px]  m-6  bg-white bg-opacity-40 rounded-lg  p-1 dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0] shadow-sm">
-              <div className='h-[30%]'> <img src={''} className=" flex w-full h-full object-cover rounded" /></div>
-              <h2 className="flax text-2xl text-white font-semibold text-center mt-2 p-2 h-[15%]">Name</h2>
-              <p className='flex text-[#CBD5E1] text-sm h-[20%] justify-center'>Post</p>
-              <p> we should do a data of mentors also !! </p>
-              <ul className="regular-14 flex gap-4 text-gray-30">
-             
-                <li className=' '>
-                  <span className="[&>svg]:h-5 [&>svg]:w-5 flex ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 448 512">
-                      <path
-                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-                    </svg>
-                  </span>
-                </li>
-              </ul>
-
-            </div>
-
-          </div>
-        </div>
+      
 
       </div>
     </>

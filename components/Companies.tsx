@@ -59,16 +59,19 @@ const Companies = () => {
        <span className='text-3xl font-bold '>Start Your </span><span className="text-orange-10 text-3xl  font-bold">Learning Journey</span> <span className='text-3xl  font-bold '>- We Will Show You the Path</span>
       </div>
 
-      <div className="rounded-md bg-white flex flex-wrap justify-center">
+
+      <div className=" bg-white flex flex-wrap justify-center ">
         {roadmaps.map((item, index) => (
-          <div key={index} className="w-70 md:w-70 h-30 m-8 bg-[#d0d5dc] border-[#FB8971] bg-opacity-10 rounded-lg p-2 shadow-md transform transition-transform hover:ring-2 hover:ring-[#FB8971] overflow-hidden">
-            <div className='flex p-2 overflow-hidden'>
-              <h2 className="text-l text-[#162E4F] font-semibold text-center mt-2 p-2">{item.title}</h2>
-              <Link href={`/roadmap/${item._id}`} className='inline-flex items-center px-3 text-sm font-medium text-center text-[#FB8971]'>
+          <div key={index} className=" m-8 bg-gradient-to-br h-[65px]   w-[350px] p-0.5  border-2 border-[#FB8971]  bg-opacity-10 rounded-lg shadow-md transform transition-transform hover:ring-2 hover:ring-[#FB8971] overflow-hidden">
+            <div className='flex overflow-hidden  h-[60px] w-[345px] justify-center p-2 bg-white rounded-md '>
+
+              <h2 className="text-s flex text-[#162E4F] font-semibold justify-center  p-2">{item.title}</h2>
+              <Link href={`/roadmap/${item._id}`} className='inline-flex items-center px-4 text-sm font-medium  text-[#FB8971]'>
                 <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </Link>
+
             </div>
           </div>
         ))}
