@@ -24,12 +24,13 @@ const CareerPredictor: React.FC<any> = () => {
   };
   return (
     <>
-      <div className="flex flex-col items-start px-20 py-11 text-base bg-white max-md:px-5">
-        <div className="font-lato font-semibold self-center text-[54px] top-[99px]  left-[328px] text-6xl  bg-clip-text leading-[59.4px] gray-850 max-md:max-w-full max-md:text-4xl  ">
+    
+    <div className="flex flex-col items-start px-20 py-11 text-base bg-white max-md:px-5 max-md:py-5">
+        <div className="font-lato font-semibold self-center text-[54px] top-[99px] left-[328px] text-6xl bg-clip-text leading-[59.4px] gray-850 max-md:max-w-full max-md:text-4xl">
           <span className="text-[#162E4F]">Career Scope</span>
           <span className="text- text-gradient  font-lato   bg-clip-text" >&nbsp;Predictor</span>
         </div>
-        <div className="self-center mt-2 text-[28px]  font-light tracking-tight leading-7 text-[#525252] max-md:max-w-full font-sans">
+        <div className="self-center mt-2 text-[28px] font-light tracking-tight leading-7 text-[#525252] max-md:max-w-full max-md:text-base font-sans">
           Choosing a career? Know about its scope in later years
         </div>
 
@@ -45,11 +46,12 @@ const CareerPredictor: React.FC<any> = () => {
       
       
      
-        <div className="flex flex-col ml-[108px] px-7 py-7 mt-12 w-full   bg-neutral-100 max-w-[1080px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+          <div id='works' className="flex flex-col ml-[108px] px-7 py-7 mt-5 w-full bg-[#F6F6F6] max-w-[1080px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
           <div className="font-lato tracking-wide leading-[100%] text-[#171717] max-md:max-w-full text-[Text/text-body]">
             How it works
           </div>
-          <div className="mt-2.5  font-sans leading-4 text-[Text/text-subtle] max-md:max-w-full text-[#525252]">
+          <div className="mt-2.5 font-sans leading-4 text-[Text/text-subtle] max-md:max-w-full max-md:text-base text-[#525252]">
+          
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
             justo a nulla lobortis tincidunt. Nunc malesuada quam ex, et
             ullamcorper elit lacinia in. Morbi vehicula luctus velit. In nisi
