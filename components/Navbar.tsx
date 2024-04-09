@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center h-8">
+          <Link href="/" className="flex items-center h-8 p-2">
             <Image
               src="/sqilco.svg"
               alt="Sqilco-logo"
