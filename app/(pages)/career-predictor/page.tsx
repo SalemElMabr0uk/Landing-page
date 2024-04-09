@@ -35,30 +35,27 @@ const CareerPredictor: React.FC<any> = () => {
         </div>
 
         <div className="flex flex-row mt-20 ">
-           
+           <div >
+          <Btn  />
+          </div> 
         </div>
-        <div>
-          <Btn  onClick={() => {
-           return <h1>setSelectedValue(e.target.value)</h1>; 
-             
-          }} />
-          </div>
+       
       
       
      
           <div id='works' className="flex flex-col ml-[108px] px-7 py-7 mt-5 w-full bg-[#F6F6F6] max-w-[1080px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
-          <div className="font-lato tracking-wide leading-[100%] text-[#171717] max-md:max-w-full text-[Text/text-body]">
-            How it works
+                 <div className="font-lato tracking-wide leading-[100%] text-[#171717] max-md:max-w-full text-[Text/text-body]">
+                  How it works
+                 </div>
+                  <div className="mt-2.5 font-sans leading-4 text-[Text/text-subtle] max-md:max-w-full max-md:text-base text-[#525252]">
+                
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
+                  justo a nulla lobortis tincidunt. Nunc malesuada quam ex, et
+                  ullamcorper elit lacinia in. Morbi vehicula luctus velit. In nisi
+                  purus, malesuada ut erat sit amet, dignissim vulputate est. Nullam sed
+                  dui nec metus sagittis consequat.
+                  </div>
           </div>
-          <div className="mt-2.5 font-sans leading-4 text-[Text/text-subtle] max-md:max-w-full max-md:text-base text-[#525252]">
-          
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
-            justo a nulla lobortis tincidunt. Nunc malesuada quam ex, et
-            ullamcorper elit lacinia in. Morbi vehicula luctus velit. In nisi
-            purus, malesuada ut erat sit amet, dignissim vulputate est. Nullam sed
-            dui nec metus sagittis consequat.
-          </div>
-        </div>
       </div>
     </>
   );

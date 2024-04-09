@@ -7,12 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      margin: {
+        '27': '6.75rem',
+      },
       fontFamily: {
         josefin: ["Josefin","sans-serif"],
         roboto: ["Roboto"],
         bebas_neue: ["BebasNeue"],
         anton: ["Anton"],
       },
+
       colors: {
         green: {
           50: '#30AF5B',

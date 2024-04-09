@@ -5,11 +5,11 @@ import futureCareer from './image/Sans titre.jpg';
 import { isThenable } from 'next/dist/client/components/router-reducer/router-reducer-types';
 
 const submitedClass = {
-  className: "h-12 rounded-md text-white  font-bold shadow-sm bg-[linear-gradient(91.2deg,_#FF8ED0_-1.28%,_#FB8971_103.24%)] justify-center mt-[22px] mr-[12px] items-center px-3 ml-[108px] max-w-full leading-[100%] w-[336px] max-md:px-5 max-md:ml-2.5"
+  className: "h-12 rounded-md text-white  font-bold shadow-sm bg-[linear-gradient(91.2deg,_#FF8ED0_-1.28%,_#FB8971_103.24%)] justify-center mt-[22px] mr-[12px] items-center px-3 max-w-full leading-[100%] w-[336px] "
 };
 
 const resetClass = {
-  className: "h-12 rounded-md text- text-gradient font-bold shadow-sm bg-with-100 justify-center mt-[22px]   border border-pink-300  mr-[12px] items-center px-3 ml-[108px] max-w-full leading-[100%] w-[336px] max-md:px-5 max-md:ml-2.5"
+  className: "h-12 rounded-md text- text-gradient font-bold shadow-sm bg-with-100 justify-center mt-[22px]   border border-pink-300  mr-[12px] items-center px-3 max-w-full leading-[100%] w-[336px]"
 };
 
 const careers = [
@@ -136,9 +136,9 @@ const Btn: React.FC = () => {
 
   return (
     
-    <div>
-    <div>
-    <form onSubmit={formSubmitted ? handleReset : handleSubmit}>
+    <div className='form-container'>
+   
+    <form onSubmit={formSubmitted ? handleReset : handleSubmit} className='form'>
         <SelectMenu
           
       submitted={submitted}
@@ -148,9 +148,11 @@ const Btn: React.FC = () => {
           value={selectedCareer}
           placeholder="Select a career option"
           requiredMessage="Select a career option"
+          className ="sfsf"
+         
         />
         <SelectMenu
-         
+          className ="sfsf"
          submitted={submitted}
            options={number_of_years}
           onChange={handleYearsChange}
@@ -160,7 +162,7 @@ const Btn: React.FC = () => {
           requiredMessage="Choose number of years" 
         />
         <SelectMenu
-        
+         className ="sfsf"
          submitted={submitted}
           options={country}
            onChange={handleCountryChange}
@@ -177,33 +179,34 @@ const Btn: React.FC = () => {
         
         </button>
       </form>
-      <div className="result1 "  style={{ display: formSubmitted ? 'block' : 'none' }}>
-        <p style={{fontSize:'18px' ,color:'rgba(23, 23, 23, 1)',fontWeight: 'bold'}} className='font-sans'>Number of jobs:</p>
-        <span className="text- text-gradient font-extrabold font-lato-sans  text-[40px]  bg-clip-text leading-[100%] mt-2 mb-2"  >{+selectedYears*10000}</span>
-   
-        <p style={{fontSize:'18px' ,color:'rgba(23, 23, 23, 1)',  fontWeight: 'bold'}} className='font-sans'>Why:</p>
-        <div className='font-sans'> 
-          Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet. 
-        </div>
-      </div>
-     
-    </div>
-    <div className="result2 border border-text-gradient" style={{ display: formSubmitted ? 'block' : 'none' }}>
-  <p style={{ fontSize: '18px', color: 'rgba(23, 23, 23, 1)', fontWeight: 'bold' }} className="font-sans">
-    Average Salary:
-  </p>
-  <span className="text- text-gradient font-extrabold font-lato   text-[40px]  leading-[100%] mt-2 mb-2">
-  {`${averageSalary}` + ` ${currency}`}
-  </span>
- 
-  <p style={{ fontSize: '18px', color: 'rgba(23, 23, 23, 1)', fontWeight: 'bold' }} className="font-sans">
-    Why:
-  </p>
-  <div className="font-sans">
-    Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet
-  </div>
-</div>
-{imageVisible && <Image src={futureCareer} width={720} height={400} alt='future-career-concept-img' style={{ marginTop: '-350px', marginLeft: '460px',  }} className='max-md:display ' />}
+      <div className="result ">
+            <div className="result1  "style={{ display: formSubmitted ? 'block' : 'none' }}  id="result2" >
+              <p style={{fontSize:'18px' ,color:'rgba(23, 23, 23, 1)',fontWeight: 'bold'}} className='font-sans'>Number of jobs:</p>
+              <span className="text- text-gradient font-extrabold font-lato-sans  text-[40px]  bg-clip-text leading-[100%] mt-2 mb-2 "  >{+selectedYears*10000}</span>
+        
+              <p style={{fontSize:'18px' ,color:'rgba(23, 23, 23, 1)',  fontWeight: 'bold'}} className='font-sans'>Why:</p>
+              <div className='font-sans'> 
+                Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet. 
+              </div>
+            </div>
+            <div className="result2 border border-text-gradient" style={{ display: formSubmitted ? 'block' : 'none' }}  id="result1" >
+          <p style={{ fontSize: '18px', color: 'rgba(23, 23, 23, 1)', fontWeight: 'bold' }} className="font-sans">
+            Average Salary:
+          </p>
+          <span className="text- text-gradient font-extrabold font-lato   text-[40px]  leading-[100%] mt-2 mb-2 currency">
+          {`${averageSalary}` + ` ${currency}`}
+          </span>
+        
+          <p style={{ fontSize: '18px', color: 'rgba(23, 23, 23, 1)', fontWeight: 'bold' }} className="font-sans">
+            Why:
+          </p>
+          <div className="font-sans">
+            Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet
+          </div>
+            </div>
+     </div>
+
+{imageVisible && <Image  src={futureCareer}  alt='future-career-concept-img'  className='img-container' />}
     </div>
    
    
