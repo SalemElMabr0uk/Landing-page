@@ -57,7 +57,7 @@ const roadmap = () => {
     <>
       {/* Render other parts of your component using the roadmaps data */}
       <div className="bg-white border p-4">
-        <div className="p-6">
+        <div className="p-8">
           <span className='text-4xl  font-[450]  text-center md:text-left'>Start Your </span><span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">Learning Journey</span> <span className='text-4xl  font-[450]  text-center md:text-left'>- We Will Show You the Path</span>
         </div>
 

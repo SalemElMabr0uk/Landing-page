@@ -41,7 +41,7 @@ const Section3 = () => {
   return (
     <section className="flex-Center flex-col p-8 bg-white ">
       <span className="text-4xl  font-[450]  text-center md:text-left">Work on </span>
-      <span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">
+      <span className="text_color_variation  text-4xl  sm:font-[600]  font-[450] ">
         Real Projects
       </span>
       <span className="text-4xl font-[450]  text-center md:text-left"> - Nothing beats real Experience</span>
