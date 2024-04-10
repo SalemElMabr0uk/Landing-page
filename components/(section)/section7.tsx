@@ -83,13 +83,14 @@ const Section7 = () => {
   return (
     <>
     <div className='p-8'>
-    <span className='text-4xl  font-[450] text-white text-center md:text-left'>Don’t take our Word, </span><span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">Take Theirs</span> 
+    <span className='text-3xl font-[450] text-white text-center md:text-left'>Don’t take our Word, </span><span className="text_color_variation sm:text-3xl sm:font-[600] text-3xl font-[450] ">Take Theirs</span> 
     </div>
-      <div className="flex flex-row justify-center">
+      <div className="flex justify-center">
         {visibleCards.map((data, index) => (
           <Card key={index} data={data} />
         ))}
       </div>
+
       <Pagination
         totalPages={totalPages}
         currentPage={currentPage}

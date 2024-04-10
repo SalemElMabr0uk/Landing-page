@@ -43,7 +43,7 @@ const Hero = () => {
               <div className="flex flex-col md:flex-row justify-center md:space-x-40 space-y-8 md:space-y-0 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-90">
                 <div className='items-center text-center md:text-left'>
                   <img src='/icon_project.png' alt='Project Icon' className='w-20 h-[40%] mx-auto md:mx-0' />
-                  <p className="text-[#A3A3A3] lg:p-2  md:text-left lg:text-l text-wrap justify-center text-center  h-[50%] sm:p-4 sm:text-sm">
+                  <p className="text-[#A3A3A3] lg:p-2  md:text-left lg:text-lg text-wrap justify-center text-center  h-[50%] sm:p-4 sm:text-sm">
                     Work on <span className="text-[#FB8971]">real projects</span> at{' '}
                     <span className="text-[#FE8ECE] inline-flex">real companies</span> <span>, get</span> <span className='inline-flex'>mentorship along the way</span>
                   </p>
@@ -56,7 +56,7 @@ const Hero = () => {
               <div className="flex flex-col md:flex-row justify-center md:space-x-40 space-y-8 md:space-y-0 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-90">
                 <div className='items-center text-center md:text-left'>
                   <img src='/icon_roadmap.png' alt='Roadmap Icon' className='w-20 h-[40%] mx-auto md:mx-0 ' />
-                  <p className="text-[#A3A3A3] lg:p-4   md:text-left  lg:text-l justify-center text-center lg:text-wrap h-[50%]   sm:text-sm">
+                  <p className="text-[#A3A3A3] lg:p-4   md:text-left  lg:text-lg justify-center text-center lg:text-wrap h-[50%]   sm:text-sm">
                     <span className='inline-flex'>Get up-to-date ready </span> <span className='inline-flex'> made </span><span className="text-[#FE8ECE]"> roadmaps</span> to{' '}
                     <span className="text-[#FB8971]">streamline</span> your<br/> learning  journey
                   </p>
