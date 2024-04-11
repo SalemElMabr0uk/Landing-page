@@ -31,7 +31,7 @@ const Hero = () => {
         {/* LEFT */}
         <div className='relative flex flex-1  sm:m-8'>
           <div className='relative z-40 flex-row gap-8 rounded-3xl lg:px-6 sm:flex-row'>
-            <h1 className='lg:text-4xl lg:bold-80 text-white p-2 sm:text-4xl sm:text-bold'>
+            <h1 className='lg:text-4xl lg:bold-80 text-white p-2 sm:text-4xl '>
               <span>Get free </span>
               <span className="text-pink-10 ">Learning Resources </span>
               <span>Work on</span>
@@ -42,7 +42,7 @@ const Hero = () => {
 
               <div className="flex flex-col md:flex-row justify-center md:space-x-40 space-y-8 md:space-y-0 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-90">
                 <div className='items-center text-center md:text-left'>
-                  <img src='/icon_project.png' alt='Project Icon' className='w-20 h-[40%] mx-auto md:mx-0' />
+                  <img src='/icon_project.png' alt='Project Icon' className='w-20 h-30 mx-auto md:mx-0' />
                   <p className="text-[#A3A3A3] lg:p-2  md:text-left lg:text-lg text-wrap justify-center text-center  h-[50%] sm:p-4 sm:text-sm">
                     Work on <span className="text-[#FB8971]">real projects</span> at{' '}
                     <span className="text-[#FE8ECE] inline-flex">real companies</span> <span>, get</span> <span className='inline-flex'>mentorship along the way</span>
@@ -55,13 +55,13 @@ const Hero = () => {
 
               <div className="flex flex-col md:flex-row justify-center md:space-x-40 space-y-8 md:space-y-0 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-90">
                 <div className='items-center text-center md:text-left'>
-                  <img src='/icon_roadmap.png' alt='Roadmap Icon' className='w-20 h-[40%] mx-auto md:mx-0 ' />
+                  <img src='/icon_roadmap.png' alt='Roadmap Icon' className='w-20 h-30 mx-auto md:mx-0 ' />
                   <p className="text-[#A3A3A3] lg:p-4   md:text-left  lg:text-lg justify-center text-center lg:text-wrap h-[50%]   sm:text-sm">
                     <span className='inline-flex'>Get up-to-date ready </span> <span className='inline-flex'> made </span><span className="text-[#FE8ECE]"> roadmaps</span> to{' '}
                     <span className="text-[#FB8971]">streamline</span> your<br/> learning  journey
                   </p>
                   <Link href='/roadmap' className='flex gap-4 ml-4 sm:flex-row items-start'>
-                    <Button type='button' title='Explore Programs' variant='btn_pink_orange' />
+                    <Button type='button' title='Explore Programs' variant='btn_pink_orange'   className='w-[20px] h-[20px]' />
                   </Link>
                 </div>
               </div>

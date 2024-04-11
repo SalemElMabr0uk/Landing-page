@@ -139,13 +139,13 @@ const Section5 = () => {
 
         <div className="flex flex-row p-2">
           {mentors.map((mentor, index) => (
-            <div key={index} className="w-[300px] sm:w-[400px] md:w-1/3 lg:w-1/5 hide-scrollbar overflow-hidden">
-              <div className="h-[400px] m-6 shadow-md bg-white bg-opacity-40 rounded-lg p-1 dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
+            <div key={index} className="w-[300px]  md:w-1/3  hide-scrollbar overflow-hidden">
+              <div className="lg:h-[400px] m-6 shadow-md bg-white bg-opacity-40 rounded-lg p-1 sm:h-[900px] dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
                 <div className="h-[60%]">
                   <img src={mentor.image} alt={mentor.name} className="flex h-full object-cover rounded" />
                 </div>
-                <h2 className="text-2xl font-semibold text-center h-[10%]">{mentor.name}</h2>
-                <p className="text-[#CBD5E1] text-sm text-center justify-center h-[10%]">{mentor.post}</p>
+                <h2 className="text-xl font-semibold text-center lg:h-[10%] sm:text-xl ">{mentor.name}</h2>
+                <p className="text-[#CBD5E1] text-sm text-center justify-center lg:h-[10%]">{mentor.post}</p>
 
                 <div className="flex justify-center">
                   {/* Single Icon for each mentor */}
