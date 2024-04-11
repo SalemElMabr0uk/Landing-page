@@ -469,5 +469,13 @@ font-weight: 800;
  }
 }
 
-
+.minw{
+  width: 120vh;
+}
+ 
+  @media (max-width: 768px) {
+    .minw{
+        width: 60vh;
+    }
+}
  
