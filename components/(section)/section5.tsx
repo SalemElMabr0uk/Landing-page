@@ -131,8 +131,9 @@ const Section5 = () => {
   return (
     <>
       <div className="bg-white">
+        
         {/* Meet our mentors */}
-        <div className="p-6 pb-0">
+        <div className="p-6 pb-1">
           <span className="text-4xl font-[450] text-center md:text-left">Get Mentored By </span>
           <span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450]">The Best </span>
         </div>
