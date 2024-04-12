@@ -21,7 +21,7 @@ const Section8 = () => {
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    console.log(formData); // You can handle form submission logic here
+    console.log(formData);
   };
 
   return (
