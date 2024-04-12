@@ -22,9 +22,9 @@ const Card = ({ item }: CardProps) => {
 
 
     return (
-        <div className="container2 flex  justify-between flex-col m-auto shadow-xl rounded-lg p-1 transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
-        <div className="bg-white w-[300px] h-[340px] rounded-lg">
-          <div className="space-x-2 flex ml-6 p-2">
+        <div className="container2 flex  justify-between flex-col m-2 md:m-auto shadow-xl rounded-lg p-1 transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
+        <div className="bg-white w-full sm:w-[300px] h-[340px] rounded-lg">
+          <div className="space-x-2 flex justify-between  p-2">
             <div className="flex p-4 space-x-2">
               {/* Your star rendering logic here */}
               {renderStars(item.rating)}
@@ -35,15 +35,15 @@ const Card = ({ item }: CardProps) => {
                 prefetch={false}
                 className="md:flex items-center mt-4 p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-[#162E4F] rounded-full bg-gradient-to-br from-[#162E4F] to-[#3269B5] hover:text-white dark:text-white focus:ring-4 focus:outline-none sm:text-xs"
               >
-                <span className="p-0.5 flex text-bold text-xs sm:text-left text-[#162E4F] transition-all ease-in duration-75 bg-white rounded-full">
+                <span className="px-2 py-0.5 flex text-bold text-xs sm:text-left text-[#162E4F] transition-all ease-in duration-75 bg-white rounded-full">
                   Project tag
                 </span>
               </Link>
             </div>
           </div>
-          <h2 className="text-l font-semibold text-center h-[10%]">{item.title}</h2>
+          <h2 className="text-l font-semibold p-4 text-left h-[10%]">{item.title}</h2>
           <p className="text-[#9E9EAE] text-xs h-[25%] p-4">{item.pageContent.mainLine}</p>
-          <div className="flex flex-wrap p-8 text-lg h-[15%]">
+          <div className="flex flex-wrap p-4 text-lg h-[15%]">
             {item.pageContent.points.map((point, index) => (
               <p
                 className="bg-gray-100 rounded-full px-2 flex justify-center text-xs text-gray-700 mr-2 mb-2"

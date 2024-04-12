@@ -1,12 +1,12 @@
 "use client"
-import { useState } from "react";
-import Link from "next/link";
+
 import Image from "next/image";
 
 import {
   amazon, atlassian, blinkit, citibank, cleartrip, etmoney, expedia, fastretailling, goldmansachs, googel, guardian,
   deutshebank, hoststar, ixigo, joshtalks, microsoft, oyo, park, paytm, phonepe, recur, samsung, shopify, sprinklr, swiggy, unitedhralthgroup, urbancompany
 } from "../(cards)/svgs";
+import { useState } from "react";
 
 interface Sponsor {
   _id: string;
@@ -14,40 +14,55 @@ interface Sponsor {
 }
 
 const Section6 = () => {
-  const isMobile = window.innerWidth <= 768;
-
-  const svgRows: any[][] = [
-    [amazon, atlassian, blinkit, citibank, cleartrip, etmoney, expedia, fastretailling],
-    [goldmansachs, googel, guardian, deutshebank, hoststar, ixigo, joshtalks, microsoft],
-    [oyo, park, paytm, phonepe, recur, samsung, shopify, sprinklr],
-    [swiggy, unitedhralthgroup, urbancompany]
-  ];
 
   return (
     <>
-      <div className="bg-white p-6">
-        <div className="p-6 pb-0">
-          <span className='text-4xl  font-[450]  text-center md:text-left'>  Get Mentored By </span>
-          <span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">The Best </span>
-        </div>
+      <div className="bg-white p-8">
 
-        <div className="flex flex-col p-4 pb-0 justify-center"> 
-          <div className="flex flex-col p-8">
-            {svgRows.map((row, rowIndex) => (
-              <div key={rowIndex} className={`flex flex-row justify-center ${isMobile ? 'justify-center' : 'flex-wrap'}`}>
-                {row.map((svg, index) => (
-                  <div key={index} className={`w-${isMobile ? '1/2' : '1/6'} p-4`}>
-                    <Image src={svg} alt={`Sponsor ${index + 1}`} width={100} height={100} />
-                  </div>
-                ))}
-              </div>
-            ))}
+        <div className="py-8 ">
+          <h2 className="text-2xl font-semibold  mb-6 ">
+            <span className='text-4xl  font-[450]   md:text-left'> Our Students Got  </span>
+            <span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">Placed </span>
+            <span className='text-4xl  font-[450]    md:text-left'>at </span>
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <Image src={amazon} alt="" className="max-w-full h-auto" />
+            <Image src={atlassian} alt="" className="max-w-full h-auto" />
+            <Image src={blinkit} alt="" className="max-w-full h-auto" />
+            <Image src={citibank} alt="" className="max-w-full h-auto" />
+            <Image src={cleartrip} alt="" className="max-w-full h-auto" />
+            <Image src={etmoney} alt="" className="max-w-full h-auto" />
+            <Image src={expedia} alt="" className="max-w-full h-auto" />
+            <Image src={fastretailling} alt="" className="max-w-full h-auto" />
+            <Image src={goldmansachs} alt="" className="max-w-full h-auto" />
+            <Image src={googel} alt="" className="max-w-full h-auto" />
+            <Image src={guardian} alt="" className="max-w-full h-auto" />
+            <Image src={deutshebank} alt="" className="max-w-full h-auto" />
+            <Image src={hoststar} alt="" className="max-w-full h-auto" />
+            <Image src={ixigo} alt="" className="max-w-full h-auto" />
+            <Image src={joshtalks} alt="" className="max-w-full h-auto" />
+            <Image src={microsoft} alt="" className="max-w-full h-auto" />
+            <Image src={oyo} alt="" className="max-w-full h-auto" />
+            <Image src={park} alt="" className="max-w-full h-auto" />
+            <Image src={paytm} alt="" className="max-w-full h-auto" />
+            <Image src={phonepe} alt="" className="max-w-full h-auto" />
+            <Image src={recur} alt="" className="max-w-full h-auto" />
+            <Image src={samsung} alt="" className="max-w-full h-auto" />
+            <Image src={shopify} alt="" className="max-w-full h-auto" />
+            <Image src={sprinklr} alt="" className="max-w-full h-auto" />
+            <Image src={swiggy} alt="" className="max-w-full h-auto" />
+            <Image src={unitedhralthgroup} alt="" className="max-w-full h-auto" />
+            <Image src={urbancompany} alt="" className="max-w-full h-auto" />
+            <Image src={amazon} alt="" className="max-w-full h-auto" />
+
+          </div>
+          <div className="p-6 pb-0 justify-center text-center">
+            <span className='text-2xl  text_color_variation2 font-[450] '> And many more...! </span>
           </div>
         </div>
-        <div className="p-6 pb-0 justify-center text-center">
-          <span className='text-2xl  text_color_variation2 font-[450] '> And many more...! </span>
-        </div>
       </div>
+
+
     </>
   );
 };

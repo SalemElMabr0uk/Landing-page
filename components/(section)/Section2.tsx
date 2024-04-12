@@ -39,7 +39,7 @@ const roadmap = () => {
   useEffect(() => {
     const fetchRoadmaps = async () => {
       try {
-        const response = await axios.get('https://api.sqilco.com/api/roadmaps');
+        const response = await axios.get('https://sqilco-api.onrender.com/api/roadmaps');
         console.log(response.data.data);
         setRoadmaps(response.data.data);
 
@@ -56,18 +56,18 @@ const roadmap = () => {
 
     <>
       {/* Render other parts of your component using the roadmaps data */}
-      <div className="bg-white border p-4">
-        <div className="p-8">
-          <span className='text-4xl  font-[450]  text-center md:text-left'>Start Your </span><span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450] ">Learning Journey</span> <span className='text-4xl  font-[450]  text-center md:text-left'>- We Will Show You the Path</span>
+      <div className="bg-white border md:p-4">
+        <div className=" p-2 md:p-8 text-2xl font-semibold md:text-4xl">
+          <span className='  text-center md:text-left'>Start Your </span><span className="text_color_variation sm: sm:font-[600]  ">Learning Journey</span> <span className='   text-center md:text-left'>- We Will Show You the Path</span>
         </div>
 
 
-        <div className=" bg-white flex flex-wrap justify-center ">
+        <div className="flex flex-wrap justify-center min-h-[50vh]">
           {roadmaps.map((item, index) => (
-            <div key={index} className="m-8 sm:m-4 bg-gradient-to-br h-[70px] container2 w-[400px] p-0.5 text-left bg-opacity-10 rounded-lg shadow-md transform transition-transform hover:ring-2 hover:ring-[#FB8971] overflow-hidden">
-              <div className='flex overflow-hidden h-[65px] w-[395px] p-2  bg-white rounded-md '>
+            <div key={index} className=" cursor-pointer md:m-8 m-2 sm:m-4 bg-gradient-to-br  container2  w-full md:w-[400px]  text-left bg-opacity-10 rounded-lg shadow-md transform transition-transform hover:ring-2 hover:ring-[#FB8971] overflow-hidden">
+              <div className='flex justify-between w-full  overflow-hidden  p-2  bg-white rounded-md '>
                 <h2 className=" text-[#162E4F] font-semibold text-left p-2 m-2">{item.title}</h2>
-                <Link href={`/roadmap/${item._id}`} className='inline-flex items-center pr-[100] font-medium text-[#FB8971]'>
+                <Link href={`/roadmap/${item._id}`} className='inline-flex items-center  font-medium text-[#FB8971]'>
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                   </svg>

@@ -17,7 +17,7 @@ export default function Home() {
     <>
     <div>
     <Hero />
-      <Section2 />
+      <Section2/>
       <Section3 />   
       <Section4/>
       <Section5/>

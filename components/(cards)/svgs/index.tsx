@@ -28,4 +28,15 @@ export { default as swiggy } from './swiggy.svg';
 export { default as unitedhralthgroup } from './unitedhralthgroup.svg';
 export { default as urbancompany } from './urbancompany.svg';
 
+export {default as iconroadmap } from './iconroadmap.svg';
+export {default as onlinelearning } from './online learning 2 1.svg';
+export {default as practice1 }from './practice 1.svg';
+export {default as teamwork }from './teamwork 1.svg';
+export {default as work} from './work 1.svg';
+
+
+export {default as fb}from './facebook.svg';
+export {default as insta} from'./instagram.svg'
+export {default as linkedin} from'./linkedin.svg'
+export {default as twit} from'./twitter.svg'
 

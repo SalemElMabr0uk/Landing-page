@@ -13,8 +13,8 @@ const Card = ({ data }: CardProps) => {
   const { imageUrl, quote, name, designation } = data;
 
   return (
-    <div className="container2 m-5 lg:w-[650px] h-[350px] rounded-lg flex items-center">
-    <div className="rid grid-cols-1 gap-6 sm:grid-cols-2 lg:w-[650px] h-[345px] rounded-lg bg-black-30 hover:bg-[#28283c] flex items-center px-6 justify-between sm:w-[500px] sm:h-[345px]">
+    <div className="container2 m-5 md:w-[650px] md:h-[350px] w-[600px] rounded-lg flex items-center">
+    <div className="rid  sm:grid-cols-2 lg:w-[650px] h-[345px] rounded-lg bg-black-30 hover:bg-[#28283c] flex items-center px-6 justify-between sm:w-[500px] sm:h-[345px]">
   
       {/* Image displayed only on small screens */}
       <img

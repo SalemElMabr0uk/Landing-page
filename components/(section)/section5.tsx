@@ -1,5 +1,6 @@
 import React from "react"
-import Section6 from "./section6";
+import Image from "next/image";
+import { fb, insta, twit, linkedin } from "../(cards)/svgs";
 
 {/**"use client"
 import React, { useState, useEffect } from "react";
@@ -91,38 +92,44 @@ export default Section5;
  */}
 const mentors = [
   {
-    name: "Mentor 1",
+    name: "Name surname",
     image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
-    post: "Post 1",
-    icon: [
-      "https://dummyimage.com/50x50/000/fff&text=Icon1",
-      "https://dummyimage.com/50x50/000/fff&text=Icon2",
-      "https://dummyimage.com/50x50/000/fff&text=Icon3",
-      "https://dummyimage.com/50x50/000/fff&text=Icon4"
-    ]
+    post: "Designation",
+
   },
   {
-    name: "Mentor 2",
+    name: "Name surname",
     image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
-    post: "Post 2",
-    icon: [
-      "https://dummyimage.com/50x50/000/fff&text=Icon1",
-      "https://dummyimage.com/50x50/000/fff&text=Icon2",
-      "https://dummyimage.com/50x50/000/fff&text=Icon3",
-      "https://dummyimage.com/50x50/000/fff&text=Icon4"
-    ]
+    post: "Designation",
+
   },
   {
-    name: "Mentor 3",
+    name: "Name surname",
     image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
-    post: "Post 3",
-    icon: [
-      "https://dummyimage.com/50x50/000/fff&text=Icon1",
-      "https://dummyimage.com/50x50/000/fff&text=Icon2",
-      "https://dummyimage.com/50x50/000/fff&text=Icon3",
-      "https://dummyimage.com/50x50/000/fff&text=Icon4"
-    ]
+    post: "Designation",
+
+  },
+  {
+    name: "Name surname",
+    image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
+    post: "Designation",
+
+  },
+
+  {
+    name: "Name surname",
+    image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
+    post: "Designation",
+
+  },
+
+  {
+    name: "Name surname",
+    image: "https://media.istockphoto.com/id/940475680/photo/close-up-portrait-of-cheerful-brunet-young-man-in-jeans-shirt-crossing-hands-and-look-at.jpg?s=612x612&w=0&k=20&c=FFduZf0U7qxwIfkrzAPHXgxK2LoZf86i74rFtex6cLw=",
+    post: "Designation",
+
   }
+
 
 ];
 
@@ -130,46 +137,35 @@ const Section5 = () => {
 
   return (
     <>
-      <div className="bg-white">
-        
+
+      <div className="bg-white p-4">
         {/* Meet our mentors */}
-        <div className="p-6 pb-1">
-          <span className="text-4xl font-[450] text-center md:text-left">Get Mentored By </span>
-          <span className="text_color_variation sm:text-4xl sm:font-[600] text-4xl font-[450]">The Best </span>
+        <div className="p-4 ">
+          <span className="md:text-4xl font-[450] text-center md:text-left text-2xl">Get Mentored By </span>
+          <span className="text_color_variation md:text-4xl sm:font-[600]  font-[450] text-2xl">The Best </span>
         </div>
 
-        <div className="flex flex-row p-2">
+        {/* Horizontal scroll container */}
+        <div className="flex overflow-x-auto p-1 hide-scrollbar">
           {mentors.map((mentor, index) => (
-            <div key={index} className="w-[300px]  md:w-1/3  hide-scrollbar overflow-hidden">
-              <div className="lg:h-[400px] m-6 shadow-md bg-white bg-opacity-40 rounded-lg p-1 sm:h-[900px] dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
-                <div className="h-[60%]">
+            <div key={index} className="w-[300px] lg:h-[425px] ">
+              <div className="m-4 w-[230px] shadow-md bg-white bg-opacity-40 rounded-lg p-1 dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
+                <div className="h-[283px] w-[220px]">
                   <img src={mentor.image} alt={mentor.name} className="flex h-full object-cover rounded" />
                 </div>
-                <h2 className="text-xl font-semibold text-center lg:h-[10%] sm:text-xl ">{mentor.name}</h2>
+                <h2 className="text-xl font-semibold text-center lg:h-[10%] sm:text-xl">{mentor.name}</h2>
                 <p className="text-[#CBD5E1] text-sm text-center justify-center lg:h-[10%]">{mentor.post}</p>
-
-                <div className="flex justify-center">
-                  {/* Single Icon for each mentor */}
-                  <span className="h-5 w-5 flex p-2">
-                    <img src={mentor.icon[0]} alt={`${mentor.name} icon`} className="h-full w-full object-cover" />
-                  </span>
+                <div className="flex justify-center p-4">
+                  <Image src={linkedin} alt="linkedin" />
+                  <Image src={twit} alt="twit" />
+                  <Image src={insta} alt="insta" />
+                  <Image src={fb} alt="fb" />
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Add other sections or components below if needed */}
       </div>
-
-
-
-
-
-
-
-
-
 
     </>
 
