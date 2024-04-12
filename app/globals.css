@@ -16,6 +16,11 @@ body {
   font-family: Inter;
   background-color: #151523;
 }
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
 
 
 @layer utilities {
