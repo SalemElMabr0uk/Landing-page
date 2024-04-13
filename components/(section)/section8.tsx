@@ -64,12 +64,8 @@ const Section8 = () => {
                       </div>
                       {/**select phone */}
                       <div className="mb-4 flex gap-4">
-                        <select
-                          name="countryCode"
-                          id="countryCode"
-                          className=" text-[#A3A3A3] bg-[#1F1F3B] border-gray-600  rounded-lg p-2 m-2"
-                          onChange={handleChange}
-                        >
+                     
+                          <select name="countryCode" id="countryCode" title='country' className=" text-[#A3A3A3] bg-[#1F1F3B] border-gray-600  rounded-lg p-2 m-2">
 
                           <option value="+1" className='text-[#A3A3A3] bg-[#1F1F3B] border-gray-600  rounded-lg p-2 m-2'>+1 </option>
                           <option value="+91" className='text-[#A3A3A3] bg-[#1F1F3B] border-gray-600  rounded-lg p-2 m-2'>+91 </option>

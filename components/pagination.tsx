@@ -20,6 +20,7 @@ const Pagination: React.FC<PaginationProps> = ({
       {[...Array(totalPages)].map((_, page) => (
         <button
           key={page}
+          title='button pagination'
           className={`w-4 h-4 rounded-full border border-[#FB8971] ${
             currentPage === page ? 'bg-[#FB8971] text-white' : 'bg-transparent text-[#FB8971]'
           }`}

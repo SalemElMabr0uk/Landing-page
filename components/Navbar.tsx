@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
-            <button className="text-white focus:outline-none" onClick={toggleDropdown}>
+            <button className="text-white focus:outline-none" title='menu button' onClick={toggleDropdown}>
               <svg
                 className="h-6 w-6"
                 fill="none"
