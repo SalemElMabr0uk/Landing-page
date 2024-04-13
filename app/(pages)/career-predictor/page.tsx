@@ -48,7 +48,7 @@ const CareerPredictor: React.FC<any> = () => {
               handleSubmit={handleFormSubmit} // Pass handleSubmit function
             />
           </div>
-          <div className="h-auto md:ml-auto">
+          <div className="h-auto md:ml-auto mt-24">
             {showRes ? <Result infoCardData={infoCardData} /> : <Img />}
           </div>
         </div>
