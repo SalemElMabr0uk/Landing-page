@@ -1,103 +1,134 @@
- 
-import { useState } from 'react';
-import Btn from './Btn';
-import SelectMenu from './select';
-import FormsLogic from './hooks/FormsLogic';
+// Form.tsx
 
-import s from './hooks/FormsLogic';
-const submitedClass = {
-  className: "h-12 rounded-md text-white  font-bold shadow-sm bg-[linear-gradient(91.2deg,_#FF8ED0_-1.28%,_#FB8971_103.24%)] justify-center mt-[22px] mr-[12px] items-center px-3 ml-[108px] max-w-full leading-[100%] w-[336px] max-md:px-5 max-md:ml-2.5"}
-
-  const resetClass = {
-    className: "h-12 rounded-md text- text-gradient font-bold shadow-sm bg-with-100 justify-center mt-[22px]   border border-pink-300  mr-[12px] items-center px-3 ml-[108px] max-w-full leading-[100%] w-[336px] max-md:px-5 max-md:ml-2.5"}
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
 
-const careers = [
-  { value: "Software Engineer", label: "Software Engineer" },
-  { value: "DevSecOps Engineer", label: "DevSecOps Engineer" }, 
-  { value: "Full Stack Engineer", label: "Full Stack Engineer" },
-  { value: "Data-Science Engineer", label: "Data-Science Engineer" },
-  { value: "Hr", label: "Hr" },
-  { value: "Team Leader", label: "Team Leader" },
-];
 
-const number_of_years = [ 
-  { value: "0", label: "0" },
-  { value: "2", label: "2" },
-  { value: "3", label: "3" },
-  { value: "5", label: "5" },
-  { value: "7", label: "7" },
-  { value: "10", label: "10" },
-  { value: "15", label: "15" }
-];
+// SelectMenu Component
+interface SelectProps {
+  label: string;
+  options: { label: string; value: string }[];
+  error?: string;
+  placeholder: string;
+}
 
-const country = [
-  { label: "Tunisie", value: "Tunisie" },
-  { value: "Palestine", label: "Palestine" },
-  { value: "India", label: "India" },
-  { value: "Algerie", label: "Algerie" },  
-];
+const SelectMenu: React.FC<SelectProps & React.SelectHTMLAttributes<HTMLSelectElement>> = ({ label, options, error, placeholder, ...props }) => {
+  return (
+    <div className="mt-1 max-sm:w-full">
+      <label className="select-label mt-1 text-xl leading-7 text-[#171710] max-md:ml-2.5 font-sans">
+        {label}
+      </label>
+      <br />
+      <Field as="select" {...props} className={`rounded-lg border-b text-[18px] justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 py-1 mt-1 w-[333px] max-md:w-full text-[#525252] pl-2 font-sans ${error ? 'border-red-500' : ''}`}>
+        <option value="" disabled style={{ fontSize: '16px', width: '50px' }}>
+          {placeholder}
+        </option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </Field>
+      {error && (
+        <div className="text-red-500 mt-1">{error}</div>
+      )}
+    </div>
+  );
+};
 
+// Form Component
+const Forms: React.FC<any> = ({ showRes, setShowRes, handleSubmit }) => {
+  const careers = [
+    { value: "Software Engineer", label: "Software Engineer" },
+    { value: "DevSecOps Engineer", label: "DevSecOps Engineer" },
+    { value: "Full Stack Engineer", label: "Full Stack Engineer" },
+    { value: "Data-Science Engineer", label: "Data-Science Engineer" },
+    { value: "Hr", label: "Hr" },
+    { value: "Team Leader", label: "Team Leader" },
+  ];
 
-const Forms: React.FC = () => {
+  const number_of_years = [
+    { value: "0", label: "0" },
+    { value: "2", label: "2" },
+    { value: "3", label: "3" },
+    { value: "5", label: "5" },
+    { value: "7", label: "7" },
+    { value: "10", label: "10" },
+    { value: "15", label: "15" }
+  ];
 
-  const {
-    selectedCountry,
-    selectedCareer,
-    selectedYears,
-    submitted,
-    
-    formSubmitted,
-    handleCountryChange,
-    handleCareerChange,
-    handleYearsChange,
-    handleSubmit,
-    handleReset,
-  } =  FormsLogic(careers, number_of_years, country);
+  const country = [
+    { label: "Tunisie", value: "Tunisie" },
+    { value: "Palestine", label: "Palestine" },
+    { value: "India", label: "India" },
+    { value: "Algerie", label: "Algerie" },
+  ];
 
   return (
+    <div className="my-auto items-center px-3 py-4 mr-2 max-w-[336px] text-white rounded-lg leading-[100%] ml-auto md:max-w-lg mt-auto max-md:px-3 ">
+      <Formik
+        initialValues={{
+          career: "",
+          years: "",
+          country: "",
+        }}
+        validationSchema={Yup.object({
+          career: Yup.string().required("Select a career option"),
+          years: Yup.string().required("Choose number of years"),
+          country: Yup.string().required("Select country you live in"),
+        })}
+        onSubmit={(values, { setSubmitting }) => {
+          handleSubmit(values);
 
-    <div className="  my-auto  items-center px-3 py-4  mr-2 max-w-[336px] text-white rounded-lg leading-[100%] ml-auto  md:max-w-lg  mt-auto    max-md:px-3 "> 
-    <form onSubmit={formSubmitted ? handleReset : handleSubmit} >
-        <SelectMenu
-          submitted={submitted}
-          options={careers}
-          onChange={handleCareerChange}
-          label='Choose a field'
-          value={selectedCareer}
-          placeholder="Select a career option"
-          requiredMessage="Select a career option"
-        />
-        <SelectMenu
-          submitted={submitted}
-          options={number_of_years}
-          onChange={handleYearsChange}
-          label='Choose number of years'
-          value={selectedYears}
-          placeholder="Choose number of years"
-          requiredMessage="Choose number of years" 
-        />
-        <SelectMenu
-          submitted={submitted}
-          options={country}
-          onChange={handleCountryChange}
-          label='Choose country'
-          value={selectedCountry}
-          placeholder="Select country you live in" 
-          requiredMessage="Select country you live in" 
-        /> 
-
-
-
-          <Btn
-            formSubmitted={() => formSubmitted}
-            onClick={formSubmitted ? handleReset : handleSubmit}    >
-              
-            {formSubmitted ? "Reset >" : "Know the scope >"}
-          </Btn>
-
-      </form>
-      
+          setSubmitting(false);
+        }}
+       
+      >
+        {({ isSubmitting,resetForm,initialValues,errors }) => (
+          <Form>
+            <SelectMenu
+              name="career"
+              options={careers}
+              label="Choose a field"
+              placeholder="Select a career option"
+              disabled={showRes}
+              error={errors.career}
+            />
+            
+            <SelectMenu
+              name="years"
+              options={number_of_years}
+              label="Choose number of years"
+              placeholder="Choose number of years"
+              disabled={showRes}
+              error={errors.years}
+            />
+            <SelectMenu
+              name="country"
+              options={country}
+              label="Choose country"
+              placeholder="Select country you live in"
+              disabled={showRes}
+              error={errors.country}
+            />
+            {!showRes?<button
+              type="submit"
+              className={` h-12 rounded-md  shadow-sm justify-center font-lato mt-[22px] items-center px-4  max-md:w-full leading-100 w-[336px] text-white bg-[linear-gradient(91.2deg,_#FF8ED0_-1.28%,_#FB8971_103.24%)]`}
+            >
+              Submit
+            </button>:
+            <button
+              onClick={()=>{resetForm({values:initialValues});
+              setShowRes(!showRes)}}
+              className={`h-12 rounded-md font-bold shadow-sm justify-center  mt-[22px] items-center px-3   leading-100 w-[336px] text-gradient bg-with-100 border border-pink-300`}
+            >
+              Reset &gt;
+            </button>}
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Img: React.FC<SelectProps> = () => {
         <Image
           src={futureCareer}
           alt="future-career-concept-img"
-          className="  flex-auto my-auto   content-center object-fit:cover ml-[10px]  items-center justify-center md:ml-[200px]  mt-24 max-h-[1240px]"
+          className="w-full object-contain md:h-full flex-auto md:my-auto   content-center object-fit:cover   items-center justify-center max-w-[600px]"
         />
       )}
     </div>
