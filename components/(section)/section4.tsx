@@ -59,7 +59,6 @@ const Section4 = () => {
         <Image src={work} alt="" className="md:w-[100px] md:h-[200px]  w-[40px] h-[40px] hidden md:flex" />
       </div>
 
-
       <div className="flex flex-row md:flex-row  justify-center items-center">
         <div className="flex flex-col items-center md:w-[100px]">
         <div className="md:h-[60px]  h-[20px]   md:w-1 w-0.5  bg-white "></div> {/* Vertical line */}

@@ -86,11 +86,19 @@ const Footer = () => {
         <div className=" md:mb-6 md:ml-16 ">
           <h5 className=" mb-4  ml-10 font-bold ">Find Us on</h5>
           <div className="flex items-center ml-16">
-            {SOCIALS.links.map((link) => (
-              <Link href="/" key={link}>
-                <Image src={link} alt="logo" width={15} height={15} className="mr-2" />
+           
+              <Link href="/" >
+                <Image src={SOCIALS.links[0]} alt="logo" width={10} height={10} className="mr-2" />
               </Link>
-            ))}
+
+              <Link href="/" >
+                <Image src={SOCIALS.links[1]} alt="logo" width={20} height={20} className="mr-2" />
+              </Link>
+
+              <Link href="/" >
+                <Image src={SOCIALS.links[2]} alt="logo" width={20} height={20} className="mr-2" />
+              </Link>
+         
           </div>
           <h1 className="text-xs text-[#A3A3A3] ml-10 m-6 ">reach@sqilco.com</h1>
 

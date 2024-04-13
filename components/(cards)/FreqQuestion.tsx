@@ -16,7 +16,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   return (
     <div className='bg-[#1f1f3b] w-[90%]  my-2 mx-auto  rounded-md'>
       <button onClick={toggleOpen} className='flex justify-between items-center w-full focus:bg-[#2d2d57]'>
-        <p className='font-medium p-2'>{question}</p>
+        <p className='p-2 md:text-lg text-sm  text-left'>{question}</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`h-5 w-5 mr-6 transition-transform transform ${isOpen ? '' : 'rotate-270'}`}

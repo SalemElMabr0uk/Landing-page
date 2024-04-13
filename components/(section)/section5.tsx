@@ -148,7 +148,7 @@ const Section5 = () => {
         {/* Horizontal scroll container */}
         <div className="flex overflow-x-auto p-1 hide-scrollbar">
           {mentors.map((mentor, index) => (
-            <div key={index} className="w-[300px] lg:h-[425px] ">
+            <div key={index} className="w-[300px] lg:h-[425px]  ">
               <div className="m-4 w-[230px] shadow-md bg-white bg-opacity-40 rounded-lg p-1 dev transform transition-transform hover:ring-2 hover:ring-[#FF8ED0]">
                 <div className="h-[283px] w-[220px]">
                   <img src={mentor.image} alt={mentor.name} className="flex h-full object-cover rounded" />
