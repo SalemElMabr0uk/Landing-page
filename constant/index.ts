@@ -61,10 +61,12 @@ export const NAV_LINKS = [
   ];
   
   export const FOOTER_CONTACT_INFO = {
-    title: 'Contact Us',
+    title: 'Company',
     links: [
-      { label: 'Admin', value: '+91-9253032700' },
-      { label: 'Email', value: 'academics@sqilco.com' },
+      'About Us',
+      'Hire from Sqilco',
+      'Terms and Conditions'
+    
     ],
   };
   
@@ -73,9 +75,16 @@ export const NAV_LINKS = [
     links: [
       '/facebook.svg',
       '/instagram.svg',
-      '/twitter.svg',
-      '/youtube.svg',
-      '/wordpress.svg',
+      '/linkedin.svg'
     ],
   };
+
+
+  export const contact ={
+    title:'contact',
+    links:[
+      './Full Stack Development',
+      './Full Stack Development'
+    ]
+  }
   

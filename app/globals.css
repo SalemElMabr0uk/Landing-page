@@ -17,6 +17,11 @@ body {
   font-family: Inter;
   background-color: #151523;
 }
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
 
 .josefin-sans-font {
   font-family: "Josefin Sans", sans-serif;
@@ -183,4 +188,28 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+.container{
+  @apply mr-5 h-[50px] w-[90px] rounded-[10px]
+}
+.box {
+  @apply h-full w-full bg-black-30 rounded-[10px] font-semibold flex items-center justify-center text-white
+}
+.container2 {
+  padding: 2px;
+  background: linear-gradient(0deg, #ff8ed0 0%,#fd8c9e 15%, #fb8a76 100%);
+}
+
+.text_color_variation{
+  @apply bg-gradient-to-r from-[#fe8dc9] via-[#fd8ba4] to-[#fb897c] text-transparent bg-clip-text
+}
+
+.text_color_variation2{
+  @apply bg-gradient-to-r from-[#162E4F] via-[#3269B5] to-[#162E4F] text-transparent bg-clip-text
+}
+
+
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
 }

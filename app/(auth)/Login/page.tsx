@@ -41,6 +41,7 @@ export default function Login() {
             Log in to your <span className="text-gradient-pink-orange">Account</span>
           </h1>
         </div>
+
         <div className="flex items-center justify-center flex-col p-6 pt-10 rounded w-full md:max-w-md mx-auto">
         <Formik
   initialValues={{
