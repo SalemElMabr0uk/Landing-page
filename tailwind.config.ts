@@ -37,7 +37,8 @@ module.exports = {
           10: '#fe8ece',
         },
         sqilcoPink:'#FF8ED0',
-        sqilcoOrange:'#FB8971'
+        sqilcoOrange:'#FB8971',
+        textMuted:"#a3a3a3"
       },
       
       backgroundImage: {
