@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import futureCareer from './image/Sans titre.jpg';
+import futureCareer from './Image/CareerPredictiorIllustration.jpg';
 
 interface SelectProps {
   
