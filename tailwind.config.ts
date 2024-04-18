@@ -48,8 +48,12 @@ module.exports = {
         } ,
       qqgf:{
           10: 'linear-gradient(180deg, #ff8ed0, #fb8971) 1;',
-        } 
-        
+        },
+         sqilcoPink:'#FF8ED0',
+        sqilcoOrange:'#FB8971',
+        textMuted:"#a3a3a3"
+        },
+       
       },
       
       backgroundImage: {
@@ -58,6 +62,8 @@ module.exports = {
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
+
+        'primary-color':"linear"
       },
       screens: {
         xs: '400px',

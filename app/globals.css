@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -15,13 +17,34 @@ body {
   font-family: Inter;
   background-color: #151523;
 }
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
 
+
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
 
 @layer utilities {
-
+  .text-gradient-pink-orange {
+    background: linear-gradient(180deg, #FF8ED0, #FB8971);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-90deg {
+    background: linear-gradient(90deg, #FF8ED0, #FB8971);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .colour_pink_orange{
     @apply [background:linear-gradient(90deg,rgb(255,141.95,207.77)_0%,rgb(251.16,137.52,111.35)_100%)]
   }
+ 
 
   .btn_white { 
     @apply  border-white bg-white px-8 py-3 text-green-50
@@ -174,308 +197,27 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-
-.text-gradient {
-  /* Set the gradient as the background */
-  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);
-  /* Display as inline-block to fit the text */
-  display: inline-block;
-  /* Set the background to be clipped by the text */
-  -webkit-background-clip: text;
-  background-clip: text;
-  /* Set the text color to transparent so the background gradient shows through */
-  color: transparent;
+.container{
+  @apply mr-5 h-[50px] w-[90px] rounded-[10px]
 }
-.pink-gradient {
-  /* Set the gradient as the background */
-  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);
-  /* Display as inline-block to fit the text */
-  display: inline-block;
-  /* Set the background to be clipped by the text */
-  -webkit-background-clip: text;
-  background-clip: text;
-  /* Set the text color to transparent so the background gradient shows through */
-  color: transparent;
+.box {
+  @apply h-full w-full bg-black-30 rounded-[10px] font-semibold flex items-center justify-center text-white
 }
-.submit {
-  display: block; /* or inline-block */
-  width: 100%; /* Full width on smaller screens */
-  margin: 10px auto; /* Center the button with automatic horizontal margins */
-  padding: 10px 15px;
-  height: 48px;  
-  border-radius: 8px;  
-  color: white;  
-  font-weight: bold; 
- 
-  background: linear-gradient(91.2deg, #FF8ED0 -1.28%, #FB8971 103.24%);  
-  justify-content: center;  
-  margin-top: 22px;  
-  margin-right: 12px;  
-  align-items: center;  
-  padding-left: 12px; 
-  padding-right: 12px; 
-  margin-left: 108px;  
-  max-width: 100%; 
-  width: 336px;  
-  line-height: 100%;  
+.container2 {
+  padding: 2px;
+  background: linear-gradient(0deg, #ff8ed0 0%,#fd8c9e 15%, #fb8a76 100%);
 }
 
-/* Media query for max-md */
-@media (max-width: 768px) {
-  .custom-button {
-    padding-left: 20px; /* max-md:px-5 */
-    margin-left: 10px; /* max-md:ml-2.5 */
-  }
+.text_color_variation{
+  @apply bg-gradient-to-r from-[#fe8dc9] via-[#fd8ba4] to-[#fb897c] text-transparent bg-clip-text
+}
+
+.text_color_variation2{
+  @apply bg-gradient-to-r from-[#162E4F] via-[#3269B5] to-[#162E4F] text-transparent bg-clip-text
 }
 
 
-.reset {
-  height: 48px;  
-  border-radius: 8px;  
-  color: rgb(251.16,137.52,111.35);  
-  font-weight: bold; 
-  background: white;  
-  border-color: text-gradient  ;
-  justify-content: center;  
-  margin-top: 22px;  
-  margin-right: 12px;  
-  align-items: center;  
-  padding-left: 12px; 
-  padding-right: 12px; 
-  margin-left: 108px;  
-  max-width: 100%; 
-  width: 336px;  
-  line-height: 100%;  
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
 }
-.result2 {
-  border: solid 1px;
-  border-color: #FB8971;
-  height: auto; /* Change height to auto to allow content to determine height */
-  width: 90%; /* Adjust width */
-  max-width: 300px; /* Maximum width */
-  color: #525252;
-  border-radius: 8px;
-  margin-top: -314px;
-  padding: 32px;
-  gap: 10px;
-  font-family: 'Sans';
-  /* Center the box */
-  margin-left: 910px; 
-  display: flex;
-
-  display: inline-block;
-}
-
-.result1{
-  border: solid 1px;
-  border-color: #FB8971;
-  height: auto; /* Change height to auto to allow content to determine height */
-  width: 90%; /* Adjust width */
-  max-width: 300px; /* Maximum width */
-  color: #525252;
-  border-radius: 8px;
-  margin-top: -300px;
-  padding: 32px;
-  margin-left: 560px;
-  font-family: 'Sans';
-
-
-  display: flex;
-  display: inline-block;
-  flex-direction: row; /* Change flex direction to stack vertically */
-}
-@media only screen and (max-width: 768px) {
-  .flex-col {
-    flex-direction: column;
-  }
-
-  .text-xl {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-
-  /* Adjust margins, paddings, and other dimensions as needed */
-}
-
-
-.select-wrapper {
-  width: 336px; /* Fixed width */
-  margin-left: 108px; /* Fixed margin */
-}
-
- 
-.select-wrapper {
-  width: 100%; /* Use full width of the parent container */
-  margin-left: 0; /* Remove fixed margin */
-  margin-top: 1rem; /* Add relative margin */
-}
-
-@media only screen and (max-width: 768px) {
-  .select-wrapper {
-    margin-top: 2rem;  
-    max-width: 60%;
-  }
-}
-#works {
-  margin-left: 108px;
-  padding: 7px;
-  max-width: 1080px;
-}
-
-@media (max-width: 768px) {
-  #works {
-    margin-left: 20px;
-    margin-top: 50px;
-    padding: 5px;
-    max-width: 90%;
-  }
-}
-
-.select-menu select {
-  width: 100%; /* Use 100% width for flexibility */
-  max-width: 333px; /* Optionally, set a max-width */
-}
-
-.select-menu  {
-  max-width: 333px;
-  font-size: 5px;
-  padding-top: 10px;
-}
-
- 
-
-
-
-.form{
-  margin-top: 55px;
-  max-width: calc(100px + 20vw);
- 
-  margin-left: 108px !important;
-width: calc(50% + 8px); 
-
-}
-@media (max-width:800px)  {  
-  .form {
-    margin-top: -10px;
-    margin-left:  calc(1% * 1.5  ) !important;
-    max-width: calc(50% + 20vw);
-    min-width: 160px !important;
-    font-size: 14px;
-   
-
-  }
-
-}
- 
-
-
-
-/* Styles for screens wider than 1024px */
-@media (max-width: 1024px) {
-  .select-menu {
-    width:  calc(20%-30px) ;
-    flex-direction: column;
-    max-width: calc(100% - 10px);
-  }
-  .submit,
-  .reset {
-    width: calc(65% - 5%);
-    margin-left: 0; /* Remove the left margin */
-    width: 100%; /* Make the buttons take full width */
-  }
-}
- 
-  .select-label {
-    margin-bottom: 30px; /* Adjust this value as needed */
-  }
-
-  img,
-video {
-  max-width: 100%;
-}
-
-
-.img {
-  max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure proper rendering */
-  margin: 0 auto; /* Center the image */
-}
-
-@media (max-width: 768px) {
-  .img {
-   max-width: calc(100% - 10px); /* Limit image width for smaller screens */
-    padding-top: 100px;
-    padding-left: 5px;
-
-  }
-}
-.currency{
-  margin-top: 0.5rem; 
-margin-bottom: 0.5rem; 
-font-weight: 800; 
- 
-
-}
-
-@media (max-width: 408px) {
-  .currency {
-   font-size: 36px;
-
-  }
-}
-
-.img-container {
- margin-top:-400px ;
- margin-left: 460px;
-
-}
-
-@media (max-width: 824px) {
-  .img-container {
-   display: flex;
-   margin-top:15px ;
- width: calc(55%*1.5 + 20vw);
- height: calc(55%*1.5 + 20vw);
-   margin-left:  calc(-15% + 1vw);
-  
-  }
-}
-
-
-
- 
- 
-@media (max-width: 1024px) {
-  .result2
-   {
-    max-height: calc(100%*1.3);
-    max-width: calc(100%*0.6);
-    margin-left:0px;
-    margin-top: 20px; 
-
-    flex-direction: column;
-    padding: 20px;
-  }
-  .result1
-  {
-   max-height: calc(100%*1.3);
-   max-width: calc(100%*0.6);
-   margin-left:0px;
-   margin-top: 20px; 
-
-   flex-direction: column;
-   padding: 20px;
- }
-}
-
-.minw{
-  width: 120vh;
-}
- 
-  @media (max-width: 768px) {
-    .minw{
-        width: 60vh;
-    }
-}
- 
