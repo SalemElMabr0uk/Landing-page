@@ -16,12 +16,12 @@ interface SelectProps {
 
 const SelectMenu: React.FC<SelectProps & React.SelectHTMLAttributes<HTMLSelectElement>> = ({ label, options, error, placeholder, ...props }) => {
   return (
-    <div className="mt-1 max-sm:w-full">
-      <label className="select-label mt-1 text-xl leading-7 text-[#171710] max-md:ml-2.5 font-sans">
+    <div className="mt-2 mb-2 max-sm:w-full">
+      <label className="  mt-1 text-xl leading-7 text-[#171710] max-md:ml-2.5 josefin-sans-font    ">
         {label}
       </label>
       <br />
-      <Field as="select" {...props} className={`rounded-lg border-b text-[18px] justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 py-1 mt-1 w-[333px] max-md:w-full text-[#525252] pl-2 font-sans ${error ? 'border-red-500' : ''}`}>
+      <Field as="select" {...props} className={`rounded-lg border-b  mb-2 text-[18px]  justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 py-1 mt-1 w-[333px] max-md:w-full text-[#525252] pl-2 josefin-sans-font ${error ? 'border-red-500' : ''}`}>
         <option value="" disabled style={{ fontSize: '16px', width: '50px' }}>
           {placeholder}
         </option>
@@ -122,7 +122,7 @@ const Forms: React.FC<any> = ({ showRes, setShowRes, handleSubmit }) => {
             <button
               onClick={()=>{resetForm({values:initialValues});
               setShowRes(!showRes)}}
-              className={`h-12 rounded-md font-bold shadow-sm justify-center  mt-[22px] items-center px-3  max-md:w-full  leading-100 w-[336px] text-gradient bg-with-100 border border-pink-300`}
+              className={`h-12 rounded-md font-bold shadow-sm justify-center  mt-[22px] items-center px-3  max-md:w-full  leading-100 w-[336px] text-gradient-pink-orange bg-with-100 border border-pink-300`}
             >
               Reset &gt;
             </button>}

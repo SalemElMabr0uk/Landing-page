@@ -219,3 +219,9 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
 }
+
+@layer components {
+  .rounded-lg {
+    border-radius: 0.75rem; /* Example border-radius value */
+  }
+}

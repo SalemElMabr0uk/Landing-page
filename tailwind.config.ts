@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './globals.css',
   ],
   theme: {
     extend: {
+      borderRadius: {
+        'lg': '0.5rem', // Define the 'rounded-lg' utility
+      },
       margin: {
         '27': '6.75rem',
       },
@@ -16,7 +20,6 @@ module.exports = {
         bebas_neue: ["BebasNeue"],
         anton: ["Anton"],
       },
-
       colors: {
         green: {
           50: '#30AF5B',
@@ -45,25 +48,18 @@ module.exports = {
         },
         pink:{
           10: '#fe8ece',
-        } ,
-      qqgf:{
-          10: 'linear-gradient(180deg, #ff8ed0, #fb8971) 1;',
         },
-         sqilcoPink:'#FF8ED0',
+        sqilcoPink:'#FF8ED0',
         sqilcoOrange:'#FB8971',
         textMuted:"#a3a3a3"
-        },
-       
       },
-      
       backgroundImage: {
         'bg-img-1': "url('/software_engineering.png')",
         'bg-img-2': "url('/data_analytics.png')",
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
-
-        'primary-color':"linear"
+        'primary-color': "linear-gradient(180deg, #ff8ed0, #fb8971)",
       },
       screens: {
         xs: '400px',
@@ -78,6 +74,5 @@ module.exports = {
       },
     },
   },
-  plugins: {
-  }
+  plugins: []
 };

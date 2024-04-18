@@ -16,7 +16,7 @@ const infoCardData = [
       'Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar.',
   },
   {
-    title2: 'Average Salary',
+    title2: 'Average Salary:',
     value: '10 LPA',
     description:
       'Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar.',
@@ -41,18 +41,18 @@ const CareerPredictor: React.FC<any> = () => {
       <div className="flex flex-col items-center py-11 text-base bg-white max-md:px-5">
         <Title />
         <div className="flex-col-reverse lg:flex-row inline-flex">
-          <div className="md:mt-24 text-xl leading-7 text-neutral-900 md:max-lg:flex max-w-md">
+          <div className="md:mt-24 text-xl leading-7  text-neutral-900 md:max-lg:flex max-w-md">
             <FormSelect
               showRes={showRes}
               setShowRes={setShowRes}
-              handleSubmit={handleFormSubmit} // Pass handleSubmit function
+              handleSubmit={handleFormSubmit}  
             />
           </div>
-          <div className="h-auto md:ml-auto md:mt-auto ">
+          <div className="h-auto md:ml-auto md:mt-auto mt-10 ">
             {showRes ? <Result infoCardData={infoCardData} /> : <Img />}
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row min-ml-auto  md:ml-[108px]">
           <Description />
         </div>
       </div>

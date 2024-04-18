@@ -28,19 +28,19 @@ const SelectMenu: React.FC<SelectProps> = ({
   const showError = error && touched[name]; // Use error prop instead of errors[name]
 
   return (
-    <div className="mt-1 max-sm:w-full">
-      <label className="select-label mt-1 text-xl leading-7 text-[#171710] max-md:ml-2.5 font-sans">
+    <div className="mt-4  max-sm:w-full   ">
+      <label className="  mt-1 text-xl leading-7 text-[#171710] max-md:ml-2.5 mb-auto  josefin-sans-font">
         {label}
       </label>
       <br />
       <select
         {...field}
         disabled={disabled}
-        className={`rounded-lg border-b text-[18px] justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 py-1 mt-1 w-[333px] max-md:w-full text-[#525252] pl-2 font-sans ${
+        className={`rounded-lg border-b text-[18px] josefin-sans-font justify-center border-pink-300 bg-[rgba(19,19,19,0.05)] bg-opacity-25 py-1 mt-1 w-[333px] max-md:w-full text-[#525252] pl-2 ${
           showError ? 'border-red-500' : ''
         }`}
       >
-        <option value="" disabled>
+        <option value="" disabled >
           {placeholder}
         </option>
         {options.map((option) => (
