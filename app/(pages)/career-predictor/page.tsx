@@ -40,8 +40,8 @@ const CareerPredictor: React.FC<any> = () => {
     <>
       <div className="flex flex-col items-center py-11 text-base bg-white max-md:px-5">
         <Title />
-        <div className="flex-col-reverse lg:flex-row inline-flex">
-          <div className="md:mt-24 text-xl leading-7  text-neutral-900 md:max-lg:flex max-w-md">
+        <div className="flex-col-reverse lg:flex-row inline-flex ">
+          <div className="md:mt-24 text-xl leading-7 min-ml-auto  md:ml-[108px]  text-neutral-900 md:max-lg:flex max-w-md">
             <FormSelect
               showRes={showRes}
               setShowRes={setShowRes}

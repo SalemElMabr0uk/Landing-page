@@ -9,8 +9,10 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
-        'lg': '0.5rem', // Define the 'rounded-lg' utility
+        '5xl': '2.5rem', // Define the 'rounded-5xl' utility
       },
+  
+      
       margin: {
         '27': '6.75rem',
       },
@@ -69,10 +71,15 @@ module.exports = {
       maxWidth: {
         '10xl': '1512px',
       },
-      borderRadius: {
-        '5xl': '40px',
+      spacing: {
+        '10xl': '1512px',
       },
+    
+    
     },
   },
-  plugins: []
-};
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
