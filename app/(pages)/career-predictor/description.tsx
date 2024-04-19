@@ -14,9 +14,9 @@ const Description: React.FC<SelectProps> = () => {
  
 
   return (
-    <div className=" max-md:w-full"> 
+    <div className=" max-md:w-auto  mr-20"> 
           
-          <div id='works' className="flex flex-col min-ml-[108px]  mt-10 p-5  w-full bg-[#F6F6F6] max-w-[1480px] max-md:px-5 max-md:mt-10 max-md:max-w-full ">
+          <div id='works' className="flex flex-col ml-[108px]  mt-10 p-5  w-full bg-[#F6F6F6] max-w-[1480px] max-md:px-5 max-md:mt-10 max-md:max-w-full ">
                  <div className="font-lato tracking-wide leading-[100%] pl-5 pt-5 pr-5 text-[#171717] font-semibold max-md:max-w-full text-[Text/text-body]">
                   How it works
                  </div>

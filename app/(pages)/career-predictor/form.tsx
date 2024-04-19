@@ -16,7 +16,7 @@ interface SelectProps {
 
 const SelectMenu: React.FC<SelectProps & React.SelectHTMLAttributes<HTMLSelectElement>> = ({ label, options, error, placeholder, ...props }) => {
   return (
-    <div className="mt-2 mb-2 max-sm:w-full">
+    <div className="mt-2 mb-2 max-sm:w-full      max-md:px-3 ml-auto ">
       <label className="  mt-1 text-xl leading-7 text-[#171710] josefin-sans-font    ">
         {label}
       </label>
@@ -67,7 +67,7 @@ const Forms: React.FC<any> = ({ showRes, setShowRes, handleSubmit }) => {
   ];
 
   return (
-    <div className="my-auto items-center px-3     py-4 mr-2 max-w-[336px] text-white rounded-lg leading-[100%]     md:max-w-lg mt-auto max-md:px-3 ">
+    <div className="my-auto items-center px-3 py-4 mr-2 max-w-[336px] text-white rounded-lg leading-[100%] ml-[108px] md:max-w-lg mt-auto max-md:px-3 ">
       <Formik
         initialValues={{
           career: "",

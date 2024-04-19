@@ -11,7 +11,8 @@ const Result: React.FC<any> = ({infoCardData}) => {
 
   return (
     <div className="max-md:w-full lg:gap-6 flex flex-col md:flex-row   h-auto  ">
-     <div className="flex flex-col p-9 font-bold rounded-lg border h-auto md:h-auto border-red-400 border-solid shadow-sm leading-[100%] max-md:w-5/6 ml-5 md:ml-[5vh] min-md:h-2/3 max-md:mt-5 min-h-[308px]  w-[300px]" id="box1">
+    <div className="flex flex-col p-9 font-bold rounded-lg border h-auto md:h-auto border-red-400 border-solid shadow-sm leading-[100%] max-md:w-5/6 ml-5 md:ml-[5vh] min-md:h-2/3 max-md:mt-5 min-h-[308px] max-w-[300px]" id="box1">
+      
         <div className="text-base text-neutral-900">{infoCardData[0].title1}</div>
         <div className="mt-3 bold text-4xl bg-clip-text text-gradient-pink-orange">
           {infoCardData[0].value}
@@ -23,7 +24,7 @@ const Result: React.FC<any> = ({infoCardData}) => {
         </div>
       </div>
 
-      <div className="flex flex-col p-9 font-bold rounded-lg border h-auto md:h-auto border-red-400 border-solid shadow-sm leading-[100%] max-md:w-5/6 ml-5 md:ml-[5vh] min-md:h-2/3 max-md:mt-5 min-h-[308px]  w-[300px] max-w-[400px]" id="box2">
+      <div className="flex flex-col p-9 font-bold rounded-lg border h-auto md:h-auto border-red-400 border-solid shadow-sm leading-[100%] max-md:w-5/6 ml-5 md:ml-[5vh] min-md:h-2/3 max-md:mt-5 min-h-[308px]  max-w-[300px]  " id="box2">
         <div className="text-base text-neutral-900">{infoCardData[1].title2}</div>
         <div className="mt-3 bold text-4xl tracking-wide bg-clip-text text-gradient-pink-orange">
           {infoCardData[1].value}
